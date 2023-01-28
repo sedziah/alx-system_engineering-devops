@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# a Bash script that displays To infinity and beyond indefinitely
+# it ignores a signal to terminate and prints a statement whenever
+# it recieves the signal
+
+while (true)
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap "echo I am invincible!!!" SIGTERM
+done
